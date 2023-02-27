@@ -1,7 +1,7 @@
 import { Form } from "react-bootstrap";
 
-export const DetailForm = ({ Nama, Poli, Dokter, Handphone, Antrian }) => {
-  if (!(Nama && Poli && Dokter && Handphone && Antrian)) {
+export const DetailForm = ({ nama, poli, dokter, handphone, antrian }) => {
+  if (!(nama && poli && dokter && handphone && antrian)) {
     return (
       <Form>
         <Form.Group>
@@ -10,8 +10,10 @@ export const DetailForm = ({ Nama, Poli, Dokter, Handphone, Antrian }) => {
         </Form.Group>
         <Form.Group>
           <Form.Label>Poli</Form.Label>
-          <Form.Select aria-label="Pilih Poli">
-            <option selected disabled>Pilih Poli</option>
+          <Form.Select defaultValue="0" aria-label="Pilih Poli">
+            <option value="0" disabled>
+              Pilih Poli
+            </option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
@@ -19,8 +21,10 @@ export const DetailForm = ({ Nama, Poli, Dokter, Handphone, Antrian }) => {
         </Form.Group>
         <Form.Group>
           <Form.Label>Dokter</Form.Label>
-          <Form.Select aria-label="Pilih Dokter">
-            <option selected disabled>Pilih Dokter</option>
+          <Form.Select defaultValue="0" aria-label="Pilih Dokter">
+            <option value="0" disabled>
+              Pilih Dokter
+            </option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
@@ -32,7 +36,7 @@ export const DetailForm = ({ Nama, Poli, Dokter, Handphone, Antrian }) => {
         </Form.Group>
         <Form.Group>
           <Form.Label>No Antrian</Form.Label>
-          <Form.Control type="number" placeholder={Antrian} disabled />
+          <Form.Control type="number" placeholder={antrian} disabled />
         </Form.Group>
       </Form>
     );
@@ -42,27 +46,27 @@ export const DetailForm = ({ Nama, Poli, Dokter, Handphone, Antrian }) => {
         <tr>
           <td>Name</td>
           <td>:</td>
-          <td>{Nama}</td>
+          <td>{nama}</td>
         </tr>
         <tr>
           <td>Poli</td>
           <td>:</td>
-          <td>{Poli}</td>
+          <td>{poli}</td>
         </tr>
         <tr>
           <td>Dokter</td>
           <td>:</td>
-          <td>{Dokter}</td>
+          <td>{dokter}</td>
         </tr>
         <tr>
           <td>No Handphone</td>
           <td>:</td>
-          <td>{Handphone}</td>
+          <td>{handphone}</td>
         </tr>
         <tr>
           <td>No Antrian</td>
           <td>:</td>
-          <td>{Antrian}</td>
+          <td>{antrian}</td>
         </tr>
       </table>
     );

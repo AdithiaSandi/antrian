@@ -3,10 +3,15 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
-h2 {
+h1 {
   padding-top: 1em;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
+}
+
+.content-bx {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .sesi-bx {
@@ -20,6 +25,11 @@ h2 {
   background-color: white;
   padding-right: 1em;
   z-index: 1;
+  border-radius: 20px;
+}
+
+.btm {
+  margin-top: 2em;
 }
 
 .card-bx {
@@ -39,6 +49,7 @@ h2 {
   padding: 10px;
   background-color: #f2f2f2;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 50px 0 rgba(0, 0, 0, 0.19);
+  border: none;
   border-radius: 5px;
   width: 50px;
   z-index: 0;
@@ -50,16 +61,19 @@ h2 {
 }
 
 .action-bx {
-  max-width: 30%;
+  font-weight: bold;
+  padding: 1em;
+  max-width: 100%;
+  flex-grow: 1;
 }
 
 .detail-bx {
-  max-width: 50%;
+  max-width: 100%;
 }
 
 .legend-bx {
   position: relative;
-  margin: 1em;
+  margin: 1em 0 1em 0;
 }
 
 .status {
@@ -68,6 +82,7 @@ h2 {
   background-color: white;
   padding-right: 1em;
   color: #64999f;
+  font-weight: normal;
   /* border-radius: px; */
 }
 
@@ -79,12 +94,22 @@ h2 {
   z-index: 0;
 }
 
+.status-row {
+  display: flex;
+}
+
 .status-legend {
   width: 50px;
   height: 50px;
   margin: 1em 1em 1em 0;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.status-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .available {
@@ -101,4 +126,33 @@ h2 {
 
 .unavailable {
   background-color: #bdbdbd;
+}
+
+.action-btn button {
+  width: 100%;
+  background-color: wh;
+}
+
+.action-btn .cancel-btn {
+  border: none;
+  color: #f2994a;
+  background-color: #f2f2f2;
+}
+
+.action-btn .cancel-btn:hover {
+  border: none;
+  color: #f2994a;
+  background-color: #f2f2f2;
+}
+
+.action-btn .confirm-btn {
+  border: none;
+  color: #f2f2f2;
+  background-color: #f2994a;
+}
+
+.action-btn .confirm-btn:hover {
+  border: none;
+  color: #f2f2f2;
+  background-color: #f2994a;
 }

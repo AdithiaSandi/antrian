@@ -1,9 +1,7 @@
-import { Button, Col } from "react-bootstrap";
-
-export const Card = ({ int }) => {
+export const Card = ({ nama, poli, dokter, handphone, antrian }) => {
   return (
-    <div className="card-item">
-      <h4>{int}</h4>
-    </div>
+    <button className="card-item">
+      <h4>{antrian}</h4>
+    </button>
   );
 };
