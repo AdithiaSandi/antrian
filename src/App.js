@@ -8,8 +8,8 @@ import { useState, useEffect } from "react";
 function App() {
   let data = JSON.parse(localStorage.getItem("antrian"));
 
-  const sesi1 = data.slice(0, data.length / 2);
-  const sesi2 = data.slice(data.length / 2, data.length);
+  const sesi1 = data?.slice(0, data.length / 2);
+  const sesi2 = data?.slice(data.length / 2, data.length);
 
   const [clicked, setClicked] = useState({});
   const [formData, setFormData] = useState({});
