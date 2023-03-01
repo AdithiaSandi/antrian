@@ -19,7 +19,7 @@ export const DetailForm = ({
           <Form.Control
             type="text"
             placeholder="Masukkan Nama"
-            value={formData.nama ? formData.nama : null}
+            value={formData.nama ? formData.nama : ""}
             onChange={(e) =>
               updateForm((prev) => ({ ...prev, nama: e.target.value }))
             }
@@ -63,7 +63,7 @@ export const DetailForm = ({
           <Form.Control
             type="number"
             placeholder="Masukkan Nomor Telepon"
-            value={formData.handphone ? formData.handphone : null}
+            value={formData.handphone ? formData.handphone : 0}
             onChange={(e) =>
               updateForm((prev) => ({ ...prev, handphone: e.target.value }))
             }
