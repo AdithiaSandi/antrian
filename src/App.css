@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
 body {
   background-color: #f9f9f9;
   font-family: "Poppins", sans-serif !important;
@@ -36,7 +41,7 @@ h1 {
   position: relative;
   top: 11px;
   padding-top: 1em;
-  border-top: solid 1px black;
+  border-top: solid 1px #87c6ce;
   z-index: 0;
   width: 100%;
   display: flex;
@@ -69,6 +74,18 @@ h1 {
 
 .detail-bx {
   max-width: 100%;
+  margin-top: 0.5em;
+}
+
+td {
+  padding-bottom: 1em;
+}
+
+td.colon {
+  padding-right: 2em;
+  padding-left: 8em;
+  padding: auto 2em auto 8em;
+  text-align: center;
 }
 
 .legend-bx {
@@ -83,13 +100,12 @@ h1 {
   padding-right: 1em;
   color: #64999f;
   font-weight: normal;
-  /* border-radius: px; */
 }
 
 .status-bx {
   position: relative;
   top: 11px;
-  border-top: solid 1px black;
+  border-top: solid 2px #87c6ce;
   padding-top: 1em;
   z-index: 0;
 }
@@ -133,6 +149,10 @@ h1 {
   background-color: wh;
 }
 
+.action-btn button:active {
+  background-color: #259fab !important;
+}
+
 .action-btn .cancel-btn {
   border: none;
   color: #f2994a;
@@ -145,6 +165,10 @@ h1 {
   background-color: #f2f2f2;
 }
 
+.action-btn .cancel-btn:disabled {
+  background-color: red;
+}
+
 .action-btn .confirm-btn {
   border: none;
   color: #f2f2f2;
@@ -155,4 +179,22 @@ h1 {
   border: none;
   color: #f2f2f2;
   background-color: #f2994a;
+}
+
+.action-btn .confirm-btn:disabled {
+  background-color: #eba363;
+}
+
+
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////             ///////////////////////// */
+/* ///////////////////// MEDIA QUERY ///////////////////////// */
+/* /////////////////////             ///////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+
+@media only screen and (max-width: 375px) {
+  /* For mobile phones: */
+  .sesi-bx {
+    max-width: 100%;
+  }
 }
